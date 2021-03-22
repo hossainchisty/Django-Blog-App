@@ -9,5 +9,13 @@
 7. Create Super User `python manage.py createsuperuser`
 8. Finally Run The Project `python manage.py runserver`
 
-## home
+### Home
 ![Image of demo](https://github.com/hossainchisty/Django-Blog-App/blob/master/Finaldemo/home.png)
+
+### Sign in
+![Image of demo](https://github.com/hossainchisty/Django-Blog-App/blob/master/Finaldemo/singin.png)
+
+### Sign up
+![Image of demo](https://github.com/hossainchisty/Django-Blog-App/blob/master/Finaldemo/sigup.png)
+
+
