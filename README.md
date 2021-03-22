@@ -16,7 +16,7 @@
 ![Image of demo](https://github.com/hossainchisty/Django-Blog-App/blob/master/Finaldemo/post_blog.png)
 
 ### Sign in
-![Image of demo](https://github.com/hossainchisty/Django-Blog-App/blob/master/Finaldemo/singin.png)
+![Image of demo](https://github.com/hossainchisty/Django-Blog-App/blob/master/Finaldemo/signin.png)
 
 ### Sign up
 ![Image of demo](https://github.com/hossainchisty/Django-Blog-App/blob/master/Finaldemo/sigup.png)
