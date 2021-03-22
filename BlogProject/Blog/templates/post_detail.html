@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!-- Blog Entries Column -->
+<div class="col-md-8 p-4">
+    <!-- Blog Post -->
+    <div class="card mb-4 my-6">
+        <img class="card-img-top" src="https://sonomacounty.ca.gov/uploadedImages/Sonoma_County_Portal/Human_Services/_Uploaded_Images/_Content/Employment_and_Training/e-t-wib-light-bulb-750x300.jpg?n=8565" alt="Card image cap">
+        <div class="card-body">
+            <h3 class="card-title">{{ object.title }}</h3>
+            <p class="card-text">{{ object.body | linebreaks }}</p>
+            
+        </div>
+        <div class="card-footer text-muted">
+            Posted on {{ object.published_date }}
+            by
+            <a href="#">
+            <span class="text-info mr-2">
+            
+            {{ object.author}} 
+            </span>
+            </a>
+        </div>
+    <a href="{% url 'home' %}" class="btn btn-dark">&larr; Back to home</a>
+    </div>
+</div>
+{% endblock %}
