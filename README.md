@@ -12,10 +12,14 @@
 ### Home
 ![Image of demo](https://github.com/hossainchisty/Django-Blog-App/blob/master/Finaldemo/home.png)
 
+### Post Blog
+![Image of demo](https://github.com/hossainchisty/Django-Blog-App/blob/master/Finaldemo/post_blog.png)
+
 ### Sign in
 ![Image of demo](https://github.com/hossainchisty/Django-Blog-App/blob/master/Finaldemo/singin.png)
 
 ### Sign up
 ![Image of demo](https://github.com/hossainchisty/Django-Blog-App/blob/master/Finaldemo/sigup.png)
+
 
 
