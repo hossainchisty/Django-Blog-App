@@ -11,5 +11,6 @@ class Post(models.Model):
     class Meta:
         verbose_name_plural = 'Post'
         ordering = ['-published_date',]
+        
     def __str__(self):
         return self.title
