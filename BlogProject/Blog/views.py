@@ -9,7 +9,7 @@ class HomeView(LoginRequiredMixin,ListView):
     template_name = 'index.html'
     context_object_name = 'blog_entry'
     # ordering = [-]
-    paginate_by = 2
+    paginate_by = 3
 
 class PostView(LoginRequiredMixin,DetailView):
     model = Post
