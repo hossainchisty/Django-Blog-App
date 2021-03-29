@@ -23,6 +23,12 @@ Django blog app functionalities:
 ### Post Blog
 ![Image of demo](https://github.com/hossainchisty/Django-Blog-App/blob/master/Finaldemo/post_blog.png)
 
+### Update Blog
+![Image of demo](https://github.com/hossainchisty/Django-Blog-App/blob/master/Finaldemo/post_update.png)
+
+### Delete Blog
+![Image of demo](https://github.com/hossainchisty/Django-Blog-App/blob/master/Finaldemo/post_delete.png)
+
 ### Sign in
 ![Image of demo](https://github.com/hossainchisty/Django-Blog-App/blob/master/Finaldemo/signin.png)
 
