@@ -8,7 +8,7 @@
         <img class="card-img-top" src="https://sonomacounty.ca.gov/uploadedImages/Sonoma_County_Portal/Human_Services/_Uploaded_Images/_Content/Employment_and_Training/e-t-wib-light-bulb-750x300.jpg?n=8565" alt="Card image cap">
         <div class="card-body">
             <h3 class="card-title">{{ object.title }}</h3>
-            <p class="card-text">{{ object.body | linebreaks }}</p>
+            <p class="card-text">{{ object.body | truncatechars:100}}</p>
             
         </div>
         <div class="card-footer text-muted">
@@ -21,9 +21,7 @@
             </span>
             </a>
         </div>
-    <a href="{% url 'home' %}" class="btn btn-dark">&larr; Back to home</a><br>
-    <a href="{% url 'post_edit' post.pk %}" class="btn btn-info">Update</a>
-    <a href="{% url 'post_delete' post.pk %}" class="btn btn-danger">Delete</a>
+    <a type="submit" value="Confirm" class="btn btn-danger">Confirm Delete</a>
     </div>
 </div>
 {% endblock %}

@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.views.generic import ListView,DetailView,CreateView,UpdateView
+from django.views.generic import ListView,DetailView,CreateView,UpdateView,DeleteView
 from .models import Post
 from django.urls import reverse_lazy
 from django.contrib.auth.mixins import LoginRequiredMixin
@@ -29,17 +29,15 @@ class CreatePostView(LoginRequiredMixin,CreateView):
 
 class POSTUpdateView(UpdateView):
     model = Post
-    fields = [
-        'title',
-        'body',
-    ]
+    fields = [ 'title',
+               'body' ]
     template_name = 'post_form.html'
-
-# can specify success url
-# url to redirect after successfully
-# updating details
-
     success_url = "/"
+
+class POSTDeleteView(DeleteView):
+    model = Post
+    template_name = 'post_confirm_delete.html'
+    success_url ="/"
 
 
 def search(request):
