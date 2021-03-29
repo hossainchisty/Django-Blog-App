@@ -32,7 +32,6 @@ class POSTUpdateView(UpdateView):
     fields = [
         'title',
         'body',
-        'author'
     ]
     template_name = 'post_form.html'
 
