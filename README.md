@@ -9,6 +9,12 @@
 7. Create Super User `python manage.py createsuperuser`
 8. Finally Run The Project `python manage.py runserver`
 
+Django blog app functionalities:
+* Sign Up and Login
+* Logged In user can create, update and delete post
+* Logged In user can see all posts 
+* Search for particular post
+
 ### Home
 ![Image of demo](https://github.com/hossainchisty/Django-Blog-App/blob/master/Finaldemo/home.png)
 
