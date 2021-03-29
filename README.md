@@ -15,6 +15,8 @@ Django blog app functionalities:
 * Logged In user can see all posts 
 * Search for particular post
 
+Now working with some advance feature.
+
 ### Home
 ![Image of demo](https://github.com/hossainchisty/Django-Blog-App/blob/master/Finaldemo/home.png)
 
