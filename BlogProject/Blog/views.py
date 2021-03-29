@@ -1,10 +1,11 @@
 from django.shortcuts import render
-from django.views.generic import ListView,DetailView,CreateView
+from django.views.generic.edit import ListView,DetailView,CreateView,UpdateView
 from .models import Post
 from django.urls import reverse_lazy
 from django.contrib.auth.mixins import LoginRequiredMixin
 
-class HomeView(LoginRequiredMixin,ListView):
+# we don't use LoginRequiredMixin for restrict user to see post
+class HomeView(ListView):
     model = Post 
     template_name = 'index.html'
     context_object_name = 'blog_entry'
@@ -26,7 +27,20 @@ class CreatePostView(LoginRequiredMixin,CreateView):
         form.instance.author = self.request.user 
         return super().form_valid(form)
 
-    
+class POSTUpdateView(UpdateView):
+    model = Post
+    fields = [
+        'title',
+        'body'
+    ]
+
+# can specify success url
+# url to redirect after successfully
+# updating details
+
+    success_url = "/"
+
+
 def search(request):
     query = request.GET['search_query']
     if len(query) > 60:
