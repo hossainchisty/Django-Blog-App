@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+<div class="col-md-8 p-4">
+
+    <div class="card mb-4 my-6">
+        <div class="card-header">
+            Update Blog Post
+        </div>
+        <div class="card-body">
+            <form action="" method="post">
+                {% csrf_token %}
+
+                {{ form|crispy}}
+
+                <input type="submit" value="Save" class="btn btn-outline-info">
+
+            </form>
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}

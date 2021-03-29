@@ -21,7 +21,8 @@
             </span>
             </a>
         </div>
-    <a href="{% url 'home' %}" class="btn btn-dark">&larr; Back to home</a>
+    <a href="{% url 'home' %}" class="btn btn-dark">&larr; Back to home</a><br>
+    <a href="{% url 'post_edit' post.pk %}" class="btn btn-info">Update</a>
     </div>
 </div>
 {% endblock %}

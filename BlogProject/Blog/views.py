@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.views.generic.edit import ListView,DetailView,CreateView,UpdateView
+from django.views.generic import ListView,DetailView,CreateView,UpdateView
 from .models import Post
 from django.urls import reverse_lazy
 from django.contrib.auth.mixins import LoginRequiredMixin
@@ -31,8 +31,10 @@ class POSTUpdateView(UpdateView):
     model = Post
     fields = [
         'title',
-        'body'
+        'body',
+        'author'
     ]
+    template_name = 'post_form.html'
 
 # can specify success url
 # url to redirect after successfully
