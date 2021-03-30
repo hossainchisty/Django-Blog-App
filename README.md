@@ -16,7 +16,7 @@ Django blog app functionalities:
 * Search for particular post
 
 > Now working with some advance feature. 
-
+##Preview
 ### Home
 ![Image of demo](https://github.com/hossainchisty/Django-Blog-App/blob/master/Finaldemo/home.png)
 
