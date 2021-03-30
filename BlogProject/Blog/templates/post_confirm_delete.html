@@ -6,6 +6,10 @@
     <!-- Blog Post -->
     <div class="card mb-4 my-6">
         <img class="card-img-top" src="https://sonomacounty.ca.gov/uploadedImages/Sonoma_County_Portal/Human_Services/_Uploaded_Images/_Content/Employment_and_Training/e-t-wib-light-bulb-750x300.jpg?n=8565" alt="Card image cap">
+
+        
+    <form method="post">
+        {% csrf_token %}
         <div class="card-body">
             <h3 class="card-title">{{ object.title }}</h3>
             <p class="card-text">{{ object.body | truncatechars:100}}</p>
@@ -21,7 +25,12 @@
             </span>
             </a>
         </div>
-    <a type="submit" value="Confirm" class="btn btn-danger">Confirm Delete</a>
+         
+    <input type="submit" value="Yes, Delete" class="btn btn-block btn-danger"><br>
+
+    <a href="{% url 'home' %}" class="btn btn-block btn-dark">Cancel</a>
+    </form>
+
     </div>
 </div>
 {% endblock %}
