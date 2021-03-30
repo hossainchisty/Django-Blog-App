@@ -1,7 +1,7 @@
 # Django-Blog-App
 ## How To Setup
 1. Clone This Project `https://github.com/hossainchisty/Django-Blog-App.git`
-2. Enter Project Directory `cd Django-Blog-App`
+2. Enter Project Directory `cd BlogProject`
 3. Create a Virtual Environment `virtualenv env`
 4. Activate Virtual Environment `source env/bin/activate`
 5. Install Requirements Package `pip install -r requirements.txt`
