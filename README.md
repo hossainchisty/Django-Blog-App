@@ -37,4 +37,5 @@ Django blog app functionalities:
 
 
 ### Thanks ❤ 
-### Happy coding
+### Made with ❤️ and Python.
+
