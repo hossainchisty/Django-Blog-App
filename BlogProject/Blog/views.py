@@ -9,7 +9,6 @@ class HomeView(ListView):
     model = Post 
     template_name = 'index.html'
     context_object_name = 'blog_entry'
-    # ordering = [-]
     paginate_by = 3
 
 class PostView(LoginRequiredMixin,DetailView):
@@ -30,7 +29,7 @@ class CreatePostView(LoginRequiredMixin,CreateView):
 class POSTUpdateView(UpdateView):
     model = Post
     fields = [ 'title',
-               'body' ]
+                'body' ]
     template_name = 'post_form.html'
     success_url = "/"
 
