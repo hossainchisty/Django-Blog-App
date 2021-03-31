@@ -17,7 +17,7 @@ Django blog app functionalities:
 
 > Now working with some advance feature. 
 
-## Preview
+## 📸Preview
 
 ### Home
 ![Image of demo](https://github.com/hossainchisty/Django-Blog-App/blob/master/Finaldemo/home.png)
