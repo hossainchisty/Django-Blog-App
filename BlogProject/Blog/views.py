@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,get_object_or_404
 from django.views.generic import ListView,DetailView,CreateView,UpdateView,DeleteView
 from .models import Post
 from django.urls import reverse_lazy
@@ -11,9 +11,13 @@ class HomeView(ListView):
     context_object_name = 'blog_entry'
     paginate_by = 3
 
-class PostView(LoginRequiredMixin,DetailView):
-    model = Post
-    template_name = 'post_detail.html'
+
+def post_detail(request,post):
+   
+    post = get_object_or_404(Post, slug=post)
+                                
+    return render(request, 'post_detail.html', {'post':post})
+
 
 
 class CreatePostView(LoginRequiredMixin,CreateView):
