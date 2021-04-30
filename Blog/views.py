@@ -1,5 +1,6 @@
 from django.shortcuts import render,get_object_or_404
-from django.views.generic import ListView,DetailView,CreateView,UpdateView,DeleteView
+from django.views.generic import ListView,CreateView,UpdateView,DeleteView
+from django.contrib.auth.decorators import login_required
 from .models import Post
 from django.urls import reverse_lazy
 from django.contrib.auth.mixins import LoginRequiredMixin
@@ -12,6 +13,7 @@ class HomeView(ListView):
     paginate_by = 3
 
 
+@login_required(login_url='login')
 def post_detail(request,post):
    
     post = get_object_or_404(Post, slug=post)
@@ -30,14 +32,13 @@ class CreatePostView(LoginRequiredMixin,CreateView):
         form.instance.author = self.request.user 
         return super().form_valid(form)
 
-class POSTUpdateView(UpdateView):
+class POSTUpdateView(LoginRequiredMixin,UpdateView):
     model = Post
-    fields = [ 'title',
-                'body' ]
+    fields = [ 'title','body' ]
     template_name = 'post_form.html'
     success_url = "/"
 
-class POSTDeleteView(DeleteView):
+class POSTDeleteView(LoginRequiredMixin,DeleteView):
     model = Post
     template_name = 'post_confirm_delete.html'
     success_url ="/"
