@@ -34,8 +34,7 @@ class CreatePostView(LoginRequiredMixin,CreateView):
 
 class POSTUpdateView(LoginRequiredMixin,UpdateView):
     model = Post
-    fields = [ 'title',
-                'body' ]
+    fields = [ 'title','body' ]
     template_name = 'post_form.html'
     success_url = "/"
 
